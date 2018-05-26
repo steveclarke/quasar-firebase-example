@@ -19,6 +19,13 @@
       </q-list>
     </div>
 
+    <q-btn
+      label="Seed Data"
+      color="tertiary"
+      class="q-mt-md"
+      @click="seedData()"
+    />
+
   </q-page>
 </template>
 
@@ -26,6 +33,8 @@
 </style>
 
 <script>
+import seedData from '../../data/todos'
+
 export default {
   name: 'PageIndex',
 
@@ -37,16 +46,39 @@ export default {
   },
 
   created () {
-    let collection = this.$firebase.firestore().collection('todos')
+    this.getData()
+  },
 
-    collection.get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(todo => {
-          this.todos.push(todo.data())
+  methods: {
+    getData () {
+      this.loading = true
+      this.todos = []
+
+      let collection = this.$firebase.firestore().collection('todos')
+
+      collection.get()
+        .then(querySnapshot => {
+          querySnapshot.forEach(todo => {
+            this.todos.push(todo.data())
+          })
+          this.loading = false
         })
-        this.loading = false
+        .catch(error => console.error(error))
+    },
+
+    seedData () {
+      let collection = this.$firebase.firestore().collection('todos')
+
+      seedData.forEach(todo => {
+        collection.doc().set(todo)
+          .then(() => {
+            console.log('Created', todo.title)
+            })
+          .catch(error => console.error(error))
       })
-      .catch(error => console.error(error))
+
+      this.getData()
+    }
   }
 }
 </script>

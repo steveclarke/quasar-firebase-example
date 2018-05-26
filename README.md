@@ -7,3 +7,9 @@ for web apps.
 
 Copy `firebase.conf.example.js` to `firebase.conf.js` and add the
 applicable Firebase configuration items.
+
+## Database
+
+The dashboard page has a button you can click to seed the Cloud
+Firestore database with some Todo items.
+
