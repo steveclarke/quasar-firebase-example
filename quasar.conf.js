@@ -4,8 +4,10 @@ module.exports = function (ctx) {
   return {
     // app plugins (/src/plugins)
     plugins: [
+      'auth',
       'axios',
-      'firebase'
+      'firebase',
+      'boot'
     ],
     css: [
       'app.styl'
@@ -13,7 +15,7 @@ module.exports = function (ctx) {
     extras: [
       ctx.theme.mat ? 'roboto-font' : null,
       'material-icons',
-      ctx.theme.ios ? 'ionicons' : null,
+      ctx.theme.ios ? 'ionicons' : null
       // 'mdi',
       // 'fontawesome'
     ],

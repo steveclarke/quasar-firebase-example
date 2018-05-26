@@ -9,8 +9,8 @@
       <q-list>
         <q-list-header>Todos</q-list-header>
         <q-item
-          v-for="todo in todos"
-          :key="todo.title"
+          v-for="(todo, index) in todos"
+          :key="index"
         >
           <q-item-main>
             {{ todo.title }}
@@ -20,6 +20,7 @@
     </div>
 
     <q-btn
+      v-if="!todos.length && !loading"
       label="Seed Data"
       color="tertiary"
       class="q-mt-md"

@@ -13,3 +13,7 @@ applicable Firebase configuration items.
 The dashboard page has a button you can click to seed the Cloud
 Firestore database with some Todo items.
 
+## Authentication
+
+Enable Email/Password sign-in methods to your Firebase console in the
+Authentication section. Create an account.
