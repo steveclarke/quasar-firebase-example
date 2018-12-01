@@ -21,6 +21,11 @@ export default [
         path: '',
         name: 'dashboard',
         component: () => import('pages/index')
+      },
+      {
+        path: 'test',
+        name: 'test',
+        component: () => import('pages/test')
       }
     ]
   },

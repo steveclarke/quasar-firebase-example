@@ -33,8 +33,12 @@
       >
         <q-list-header>Essential Links</q-list-header>
 
-        <q-item :to="{ name: 'dashboard' }">
+        <q-item :to="{ name: 'dashboard' }" exact>
           <q-item-main>Dashboard</q-item-main>
+        </q-item>
+
+        <q-item :to="{ name: 'test' }" exact>
+          <q-item-main>Test Page</q-item-main>
         </q-item>
 
         <q-item @click.native="signOut()">

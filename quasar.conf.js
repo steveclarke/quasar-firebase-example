@@ -2,12 +2,12 @@
 
 module.exports = function (ctx) {
   return {
+    preFetch: true,
     // app plugins (/src/plugins)
     plugins: [
       'auth',
       'axios',
-      'firebase',
-      'boot'
+      'firebase'
     ],
     css: [
       'app.styl'
