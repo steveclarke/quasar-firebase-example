@@ -34,7 +34,7 @@
 </style>
 
 <script>
-import seedData from '../../data/todos'
+import seedData from '../../data/todos.json'
 
 export default {
   name: 'PageIndex',
