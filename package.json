@@ -12,10 +12,13 @@
     "dev": "quasar dev"
   },
   "dependencies": {
+    "@quasar/extras": "^1.2.0",
     "axios": "^0.18.0",
-    "firebase": "^5.0.4"
+    "firebase": "^5.0.4",
+    "quasar": "^1.0.5"
   },
   "devDependencies": {
+    "@quasar/app": "^1.0.4",
     "babel-eslint": "^8.2.1",
     "eslint": "^4.18.2",
     "eslint-config-standard": "^11.0.0",
@@ -26,7 +29,6 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.3.0",
-    "quasar-cli": "^0.17.0",
     "strip-ansi": "=3.0.1"
   },
   "engines": {
