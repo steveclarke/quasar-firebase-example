@@ -47,20 +47,24 @@ module.exports = function (ctx) {
         'QBtn',
         'QCard',
         'QCardActions',
-        'QCardMain',
-        'QCardMedia',
-        'QCardTitle',
+        // 'QCardMain', by QCardSection
+        // 'QCardMedia', by QCardSection
+        // 'QCardTitle', by QCardSection
+        'QCardSection',
         'QField',
         'QIcon',
         'QInput',
         'QItem',
-        'QItemMain',
-        'QItemSide',
+        // 'QItemMain', by QItemLabel
+        'QItemLabel',
+        // 'QItemSide', by QItemSection.side // not in use
         'QLayout',
-        'QLayoutDrawer',
-        'QLayoutHeader',
+        // 'QLayoutDrawer', by QDrawer
+        'QDrawer',
+        // 'QLayoutHeader', by QHeader
+        'QHeader',
         'QList',
-        'QListHeader',
+        // 'QListHeader', by QItemLabel.header
         'QPage',
         'QPageContainer',
         'QSpinner',

@@ -22,7 +22,7 @@
       </q-toolbar>
     </q-layout-header>
 
-    <q-layout-drawer
+    <q-drawer
       v-model="leftDrawerOpen"
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
@@ -31,18 +31,18 @@
         link
         inset-delimiter
       >
-        <q-list-header>Essential Links</q-list-header>
+        <q-item-label class="header">Essential Links</q-item-label>
 
         <q-item :to="{ name: 'dashboard' }">
-          <q-item-main>Dashboard</q-item-main>
+          <q-item-label>Dashboard</q-item-label>
         </q-item>
 
         <q-item @click.native="signOut()">
-          <q-item-main>Sign Out</q-item-main>
+          <q-item-label>Sign Out</q-item-label>
         </q-item>
 
       </q-list>
-    </q-layout-drawer>
+    </q-drawer>
 
     <q-page-container>
       <router-view />

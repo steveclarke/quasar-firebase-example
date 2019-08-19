@@ -7,14 +7,14 @@
 
     <div v-else>
       <q-list>
-        <q-list-header>Todos</q-list-header>
+        <q-item-label class="header">Todos</q-item-label>
         <q-item
           v-for="(todo, index) in todos"
           :key="index"
         >
-          <q-item-main>
+          <q-item-label>
             {{ todo.title }}
-          </q-item-main>
+          </q-item-label>
         </q-item>
       </q-list>
     </div>
@@ -74,7 +74,7 @@ export default {
         collection.doc().set(todo)
           .then(() => {
             console.log('Created', todo.title)
-            })
+          })
           .catch(error => console.error(error))
       })
 
