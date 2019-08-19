@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-layout-header>
+    <q-header>
       <q-toolbar
         color="primary"
         :glossy="$q.theme === 'mat'"
@@ -20,7 +20,7 @@
           Quasar Firebase Example
         </q-toolbar-title>
       </q-toolbar>
-    </q-layout-header>
+    </q-header>
 
     <q-drawer
       v-model="leftDrawerOpen"
@@ -31,7 +31,7 @@
         link
         inset-delimiter
       >
-        <q-item-label class="header">Essential Links</q-item-label>
+        <q-item-label header>Essential Links</q-item-label>
 
         <q-item :to="{ name: 'dashboard' }">
           <q-item-label>Dashboard</q-item-label>

@@ -7,7 +7,7 @@
 
     <div v-else>
       <q-list>
-        <q-item-label class="header">Todos</q-item-label>
+        <q-item-label header>Todos</q-item-label>
         <q-item
           v-for="(todo, index) in todos"
           :key="index"
