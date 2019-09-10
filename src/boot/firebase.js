@@ -6,8 +6,5 @@ export default ({ Vue }) => {
   // Initialize Firebase from settings
   Firebase.initializeApp(firebaseConfig)
 
-  // Configure Firestore
-  Firebase.firestore().settings({ timestampsInSnapshots: true })
-
   Vue.prototype.$firebase = Firebase
 }
