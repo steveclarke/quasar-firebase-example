@@ -6,20 +6,20 @@
       inline
       color="white"
     >
-      <q-card-media
+      <q-card-section
         class="q-pa-md"
       >
         <img src="" />
-      </q-card-media>
+      </q-card-section>
 
-      <q-card-title
+      <q-card-section
         class="text-dark text-center"
       >
         Sign in to your account
-      </q-card-title>
+      </q-card-section>
 
       <form @submit.prevent="signIn()">
-        <q-card-main>
+        <q-card-section>
           <q-field
             icon="email"
             icon-color="light"
@@ -45,7 +45,7 @@
               autocomplete="current-password"
             />
           </q-field>
-        </q-card-main>
+        </q-card-section>
 
         <q-card-actions
           align="center"
