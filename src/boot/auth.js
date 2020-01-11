@@ -6,7 +6,7 @@ export default ({ app, router, Vue, store }) => {
     // Check to see if the route has the meta field "authRequired" set to true
     let authRequired = to.matched.some(route => route.meta.authRequired)
 
-    let isAuthenticated = Firebase.auth().currentUser !== null
+    let isAuthenticated = async () => await Firebase.auth().currentUser !== null
 
     if (authRequired) {
       if (isAuthenticated) {
