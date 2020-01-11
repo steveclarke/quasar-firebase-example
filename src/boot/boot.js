@@ -1,4 +1,5 @@
-import Firebase from 'firebase'
+import Firebase from 'firebase/app'
+import 'firebase/auth'
 
 export default ({ app, router, Vue, store }) => {
   // Register the Firebase authentication listener
