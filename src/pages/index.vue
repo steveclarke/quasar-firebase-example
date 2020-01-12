@@ -22,7 +22,6 @@
     <q-btn
       v-if="!todos.length && !loading"
       label="Seed Data"
-      color="tertiary"
       class="q-mt-md"
       @click="seedData()"
     />
