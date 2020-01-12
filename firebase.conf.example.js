@@ -4,5 +4,6 @@ module.exports = {
   databaseURL: '',
   projectId: '',
   storageBucket: '',
-  messagingSenderId: ''
+  messagingSenderId: '',
+  appId: ''
 }
