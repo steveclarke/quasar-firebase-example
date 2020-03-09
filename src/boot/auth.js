@@ -11,7 +11,9 @@ export default ({ app, router, Vue, store }) => {
     if (authRequired) {
       if (isAuthenticated) {
         // User is already signed in. Continue on.
-        next()
+        setTimeout(() => {
+          next()
+        }, 200)
       } else {
         // Not signed in. Redirect to login page.
         next({
