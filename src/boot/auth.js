@@ -18,6 +18,13 @@ export default ({ app, router, Vue, store }) => {
         })
       }
     } else {
+      // Prevent access signIn page, when user is authenticated
+      if (isAuthenticated && (to.name === 'signIn')) {
+        next({
+          name: 'dashboard'
+        })
+      }
+
       // Doesn't require authentication. Just continue on.
       next()
     }
