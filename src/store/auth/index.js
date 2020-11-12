@@ -37,6 +37,7 @@ export default {
       await Firebase.auth().signInWithEmailAndPassword(email, password)
         .then(user => {
           commit('SET_USER', user)
+         return user;
         })
         .catch(error => {
           throw error
